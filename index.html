@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Pages</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); /* Free hot air balloon bg */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .greeting {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .time {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .motto {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            gap: 2rem;
+            align-items: stretch;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            flex: 1;
+        }
+        .app-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s;
+        }
+        .app-card:hover {
+            transform: scale(1.05);
+        }
+        .app-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .app-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .sidebar {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            width: 250px;
+            min-width: 250px;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 0.8rem;
+        }
+        .footer a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .sidebar {
+                width: auto;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="greeting" id="greeting">Good Afternoon!</h1>
+        <p class="time" id="time">12:56 PM</p>
+        <p class="motto">Dream it. Wish it. Do it.</p>
+    </header>
+
+    <main class="main-content">
+        <section class="app-grid">
+            <!-- App Cards - Customize icons/labels as needed (using emoji for simplicity) -->
+            <div class="app-card"><div class="app-icon">🔗</div><div class="app-label">KM Link</div></div>
+            <div class="app-card"><div class="app-icon">📱</div><div class="app-label">KM App</div></div>
+            <div class="app-card"><div class="app-icon">🧘</div><div class="app-label">Zenlife</div></div>
+            <div class="app-card"><div class="app-icon">👑</div><div class="app-label">CPOS</div></div>
+            <div class="app-card"><div class="app-icon">🚚</div><div class="app-label">TMS</div></div>
+            <div class="app-card"><div class="app-icon">1️⃣</div><div class="app-label">One CRM</div></div>
+            <div class="app-card"><div class="app-icon">✅</div><div class="app-label">Success</div></div>
+            <div class="app-card"><div class="app-icon">👂</div><div class="app-label">OM</div></div>
+            <div class="app-card"><div class="app-icon">📞</div><div class="app-label">CEM</div></div>
+            <div class="app-card"><div class="app-icon">☎️</div><div class="app-label">Hotline</div></div>
+            <div class="app-card"><div class="app-icon">💰</div><div class="app-label">Finance</div></div>
+            <div class="app-card"><div class="app-icon">💳</div><div class="app-label">eCash</div></div>
+            <div class="app-card"><div class="app-icon">🏪</div><div class="app-label">POSM</div></div>
+            <div class="app-card"><div class="app-icon">💻</div><div class="app-label">ITSR - Submit</div></div>
+            <div class="app-card"><div class="app-icon">💡</div><div class="app-label">IdeaMart</div></div>
+            <div class="app-card"><div class="app-icon">⚖️</div><div class="app-label">JRA</div></div>
+            <div class="app-card"><div class="app-icon">📈</div><div class="app-label">Stock</div></div>
+            <div class="app-card"><div class="app-icon">🔒</div><div class="app-label">Safiz</div></div>
+            <div class="app-card"><div class="app-icon">📧</div><div class="app-label">Outlook</div></div>
+        </section>
+
+        <aside class="sidebar">
+            <h3 style="margin-top: 0;">Metrics</h3>
+            <div class="metric">OST<span>35%</span></div>
+            <div class="metric">SST<span>10%</span></div>
+            <div class="metric">UST<span>15%</span></div>
+            <div class="metric">CVR<span>15%</span></div>
+            <div class="metric">CVB<span>20%</span></div>
+            <div class="metric">CVS<span>25%</span></div>
+            <div class="metric">CVG<span>35%</span></div>
+            <div class="metric">CVP<span>75%</span></div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <a href="https://in-maxai.s3.ap-south-1.amazonaws.com/dialog/integration/Dialog%20Knowledge%20Integration%20(45-2)%20v1.0.pdf">
+            Dialog Knowledge Integration (45-2) v1.0.pdf
+        </a>
+    </footer>
+
+    <script>
+        function updateGreetingAndTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            let greeting = 'Good ';
+            if (hours < 12) greeting += 'Morning';
+            else if (hours < 17) greeting += 'Afternoon';
+            else greeting += 'Evening';
+            document.getElementById('greeting').textContent = greeting + '!';
+
+            const timeString = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+            document.getElementById('time').textContent = timeString;
+        }
+        updateGreetingAndTime();
+        setInterval(updateGreetingAndTime, 1000); // Update every second
+    </script>
+</body>
+</html>
